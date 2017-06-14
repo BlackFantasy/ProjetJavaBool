@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  * @version 1.0
  */
 
-/*Arnaud la plus belle mdr é
+/*Arnaud la plus belle mdr ég
  * 
  */
 
