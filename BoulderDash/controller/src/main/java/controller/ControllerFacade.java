@@ -29,8 +29,10 @@ public class ControllerFacade implements IController {
      * @param model
      *            the model
      */
+    
+
     public ControllerFacade(final IView view, final IModel model) {
-        super();
+        super();//bite
         this.view = view;
         this.model = model;
     }
