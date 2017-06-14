@@ -8,6 +8,11 @@ import javax.swing.JOptionPane;
  * @author Jean-Aymeric DIET jadiet@cesi.fr
  * @version 1.0
  */
+
+/*Arnaud la plus belle
+ * 
+ */
+
 public class ViewFacade implements IView {
 
     /**
