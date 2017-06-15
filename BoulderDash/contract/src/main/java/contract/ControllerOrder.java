@@ -21,17 +21,17 @@ public enum ControllerOrder {			//Enumeration of the possible action to perform 
 	/** The Nothing. */
 	Nothing,
 	
-	/** The z. */
-	Z,
-	
-	/** The q. */
-	Q,
-	
-	/** The s. */
-	S,
-	
-	/** The d. */
-	D,
+//	/** The z. */
+//	Z,
+//	
+//	/** The q. */
+//	Q,
+//	
+//	/** The s. */
+//	S,
+//	
+//	/** The d. */
+//	D,
 	
 	/** The Exit. */
 	Exit
