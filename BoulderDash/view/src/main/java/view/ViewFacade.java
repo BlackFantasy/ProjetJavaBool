@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  * @version 1.0
  */
 
-/*Arnaud la plus belle mdr ég
+/*Arnaud la plus belle mdr Ã©g
  * 
  */
 
@@ -33,3 +33,4 @@ public class ViewFacade implements IView {
     }
 
 }
+
