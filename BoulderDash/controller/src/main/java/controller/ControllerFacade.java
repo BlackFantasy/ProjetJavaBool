@@ -3,6 +3,8 @@ package controller;
 import java.sql.SQLException;
 import java.util.List;
 
+import contract.ControllerOrder;
+import contract.IController;
 import model.Example;
 import model.IModel;
 import view.IView;
@@ -75,4 +77,10 @@ public class ControllerFacade implements IController {
     public IModel getModel() {
         return this.model;
     }
+
+	@Override
+	public void orderPerform(ControllerOrder controllerOrder) {
+		// TODO Auto-generated method stub
+		
+	}
 }
