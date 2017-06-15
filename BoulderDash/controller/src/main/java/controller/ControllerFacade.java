@@ -32,7 +32,7 @@ public class ControllerFacade implements IController {
     
 
     public ControllerFacade(final IView view, final IModel model) {
-        super();//bite
+        super();
         this.view = view;
         this.model = model;
     }
