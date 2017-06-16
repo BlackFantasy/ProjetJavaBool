@@ -1,5 +1,8 @@
 package view;
 
+
+import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 public class ViewFrame {
@@ -9,12 +12,20 @@ public class ViewFrame {
 	    //Définit un titre pour notre fenêtre
 	    fenetre.setTitle("Boulder Dash");
 	    //Définit sa taille : 400 pixels de large et 100 pixels de haut
-	    fenetre.setSize(400, 100);
+	    fenetre.setSize(2560, 1600);
 	    //Nous demandons maintenant à notre objet de se positionner au centre
 	    fenetre.setLocationRelativeTo(null);
 	    //Termine le processus lorsqu'on clique sur la croix rouge
 	    fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    //Et enfin, la rendre visible        
+	    fenetre.setVisible(true);
+	    
+	    
+	    ViewPanel pan = new ViewPanel();
+	    //Définition de sa couleur de fond
+	    //pan.setBackground(Color.ORANGE);        
+	    //On prévient notre JFrame que notre JPanel sera son content pane
+	    fenetre.setContentPane(pan);
 	    fenetre.setVisible(true);
       
     } 
