@@ -19,7 +19,7 @@ public class ViewPanel extends JPanel {
 	
   public void paintComponent(Graphics g){
     try {
-    	Image img = ImageIO.read(new File("/Users/Peter/Documents/Ecole/eXia/UE - Java/Projet/sprite personnage/C9.PNG"));
+    	Image img = ImageIO.read(new File("D:/Projet JAVA/WorkEnv/DIAMANT.PNG"));
       //Pour une image de fond
       //g.drawImage(img, 50, 50, this);
       g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
