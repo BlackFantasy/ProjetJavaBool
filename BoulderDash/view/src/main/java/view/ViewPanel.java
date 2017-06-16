@@ -14,15 +14,22 @@ public class ViewPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 	Image SpriteBonhomme;
 	//Image img = SpriteBonhomme;
+	int x1 = this.getWidth()/4;
+    int y1 = this.getHeight()/4; 
 	
   public void paintComponent(Graphics g){
     try {
     	Image img = ImageIO.read(new File("/Users/Peter/Documents/Ecole/eXia/UE - Java/Projet/sprite personnage/C9.PNG"));
       //Pour une image de fond
-      g.drawImage(img, 50, 50, this);
+      //g.drawImage(img, 50, 50, this);
+      g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
+    	//g.drawImage(x1, y1, this.getWidth()/2, this.getHeight()/2);
     } catch (IOException e) {
       e.printStackTrace();
-    }                
+    }     
+                         
+    
+    
   }
              
 }
