@@ -6,6 +6,7 @@ import controller.ControllerFacade;
 import model.ModelFacade;
 import view.ViewFacade;
 import view.ViewPanel;
+import view.ViewFrame;
 
 /**
  * <h1>The Class Main.</h1>
@@ -23,8 +24,9 @@ public abstract class Main {
      */
     public static void main(final String[] args) {
     	
-    	ViewPanel view = new ViewPanel();
-    	
+    	ViewFrame windows = new ViewFrame();
+    	ViewPanel img = new ViewPanel();
+ 
         final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
 
         try {

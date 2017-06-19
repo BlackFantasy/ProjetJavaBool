@@ -4,11 +4,33 @@ package view;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-public class ViewFrame {
-  public static void main(String[] args){       
-	  JFrame fenetre = new JFrame();
+public class ViewFrame extends JFrame {
       
+	public ViewFrame(){
+		
+		//Définit un titre pour notre fenêtre
+	    this.setTitle("Ma première fenêtre Java");
+	    //Définit sa taille : 400 pixels de large et 100 pixels de haut
+	    this.setSize(2560, 1600);
+	    //Nous demandons maintenant à notre objet de se positionner au centre
+	    this.setLocationRelativeTo(null);
+	 
+	    /*
+	    //Instanciation d'un objet JPanel
+	    JPanel pan = new JPanel();
+	    //Définition de sa couleur de fond
+	    pan.setBackground(Color.ORANGE);        
+	    //On prévient notre JFrame que notre JPanel sera son content pane
+	    this.setContentPane(pan); */              
+	    this.setVisible(true);
+	    
+	  } 
+	
+	  //JFrame fenetre = new JFrame();
+   
+	  /*
 	    //Définit un titre pour notre fenêtre
 	    fenetre.setTitle("Boulder Dash");
 	    //Définit sa taille : 400 pixels de large et 100 pixels de haut
@@ -23,12 +45,12 @@ public class ViewFrame {
 	    
 	    ViewPanel pan = new ViewPanel();
 	    //Définition de sa couleur de fond
-	    //pan.setBackground(Color.ORANGE);        
+	    pan.setBackground(Color.ORANGE);        
 	    //On prévient notre JFrame que notre JPanel sera son content pane
 	    fenetre.setContentPane(pan);
 	    fenetre.setVisible(true);
-      
-    } 
+      */
+    
   
   
  }
