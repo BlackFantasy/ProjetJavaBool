@@ -28,6 +28,11 @@
       <artifactId>model</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
+    <dependency>
+    	<groupId>fr.projetbool</groupId>
+    	<artifactId>projetbool</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
