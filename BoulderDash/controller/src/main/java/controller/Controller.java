@@ -99,7 +99,7 @@ public class Controller implements IController {
 		
 
 		default:
-			try {img =ImageIO.read(new File("sprite/lorann_l.png"));//lire le sprite de lorann
+			try {img =ImageIO.read(new File("Allonge"));//lire le sprite de lorann
 			} catch (IOException e) {e.printStackTrace();}
 				this.model.BoulesetImage(img);//initialise l'image de LORANN
 				this.view.ReUpdate();//update sprite lorann

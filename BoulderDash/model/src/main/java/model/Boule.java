@@ -6,10 +6,22 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+ * 
+ * @author BlackFantasy
+ *
+ */
+
 public class Boule  {
 	private int x;//les positions
 	private int y;
 	private Image img; //variable pour l image de lorann
+	/**
+	 * 
+	 * @param x
+	 * @param y
+	 * @param imge
+	 */
 	
 	
 	Boule(int x,int y,Image imge)

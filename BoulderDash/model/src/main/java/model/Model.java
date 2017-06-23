@@ -22,7 +22,7 @@ public class Model extends Observable implements IModel {
 	private Boule boule;
 	private char[] ch =null;
 	private int cpt = 0;
-	private ElementFixe[][] elementfixe = new ElementFixe[5][5];
+	private ElementFixe[][] elementfixe = new ElementFixe[20][12];
 	private Image ima =null;
 	private int x;
 	private int y;
@@ -118,10 +118,10 @@ public class Model extends Observable implements IModel {
 		 System.out.println("ch init");
 		 System.out.println(ch[0]);
 		
-	for(y=0 ; y <  5;y++)
+	for(y=0 ; y <  11;y++)
 	{//System.out.println("for y init");
-		 for(x=0 ; x < 5 ; x++)
-		 { 	
+		 for(x=0 ; x < 19 ; x++)
+		 { 	//System.out.println("x");
 			 
 			 switch(ch[cpt])
 			 {
@@ -133,87 +133,84 @@ public class Model extends Observable implements IModel {
 //			 	elementfixe[x][y].setPenetrableOFF();
 //				 break;
 //				 
-//			 case 'C' :
-//				 try {
-//					image = ImageIO.read(new File("sprite/gate_closed.png"));						
-//					} catch (IOException e) {e.printStackTrace();}
-//				 	elementfixe[x][y] = new ElementFixe(x,y,image, false, false, 1);
-//				 	
-//				 break;
-//			 case '-' :
-//				 
-//				 try {
-//					image = ImageIO.read(new File("sprite/vertical_bone.png"));						
-//					} catch (IOException e) {e.printStackTrace();}
-//				 	elementfixe[x][y] = new ElementFixe(x,y,image,false,false,2);
-//				 	
-//				 	
-//				 break;
-//				 
-//			 case '!' :	
-//				
-//				 try{
-//				 	image = ImageIO.read(new File("sprite/horizontal_bone.png"));					
-//					} catch (IOException e) {e.printStackTrace();}				
-//					elementfixe[x][y] = new ElementFixe(x,y,image, false,false, 3);		
-//					
-//				 break;
-//				 
-//			 case 'V' :
-//					
-//				 	try{
-//				 	image = ImageIO.read(new File("sprite/bone.png"));					
-//					} catch (IOException e) {e.printStackTrace();}	
-//					elementfixe[x][y] = new ElementFixe(x,y,image,false,false,4);
-//					
-//					
-//				 break;
-//				 
-//			 
-//			 case '1' :
-//				 System.out.println("test");
-//				 try{
-//				 	image = ImageIO.read(new File("sprite/NoSprite.png"));					
-//					} catch (IOException e) {e.printStackTrace();}				
-//					elementfixe[x][y] = new ElementFixe(x,y,image,true,false,5);
-//					
-//				 break;//
-//			 case'P':
-//				
-//				 try{
-//					 	image = ImageIO.read(new File("sprite/purse.png"));					
-//						} catch (IOException e) {e.printStackTrace();}				
-//						elementfixe[x][y] = new ElementFixe(x,y,image,true,true,7);
-//						
-//						break;
-//			 case'U':
-//					
-//				 try{
-//					 	image = ImageIO.read(new File("sprite/crystal_ball.png"));					
-//						} catch (IOException e) {e.printStackTrace();}				
-//						elementfixe[x][y] = new ElementFixe(x,y,image,true,true,6);
-//						
-//						break;
+			 case 'C' :
+				 try {
+					image = ImageIO.read(new File("sprite/gate_closed.png"));						
+					} catch (IOException e) {e.printStackTrace();}
+				 	elementfixe[x][y] = new ElementFixe(x,y,image, false, false, 1);
+				 	
+				 break;
+			 case '-' :
+				 
+				 try {
+					image = ImageIO.read(new File("sprite/vertical_bone.png"));						
+					} catch (IOException e) {e.printStackTrace();}
+				 	elementfixe[x][y] = new ElementFixe(x,y,image,false,false,2);
+				 	
+				 	
+				 break;
+				 
+			 case '!' :	
+				
+				 try{
+				 	image = ImageIO.read(new File("sprite/horizontal_bone.png"));					
+					} catch (IOException e) {e.printStackTrace();}				
+					elementfixe[x][y] = new ElementFixe(x,y,image, false,false, 3);		
+					
+				 break;
+				 
+			 case 'V' :
+					
+				 	try{
+				 	image = ImageIO.read(new File("sprite/bone.png"));					
+					} catch (IOException e) {e.printStackTrace();}	
+					elementfixe[x][y] = new ElementFixe(x,y,image,false,false,4);
+					
+					
+				 break;
+				 
+			 
+			 case '1' :
+				 System.out.println("test");
+				 try{
+				 	image = ImageIO.read(new File("sprite/NoSprite.png"));					
+					} catch (IOException e) {e.printStackTrace();}				
+					elementfixe[x][y] = new ElementFixe(x,y,image,true,false,5);
+					
+				 break;//
+			 case'P':
+				
+				 try{
+					 	image = ImageIO.read(new File("sprite/purse.png"));					
+						} catch (IOException e) {e.printStackTrace();}				
+						elementfixe[x][y] = new ElementFixe(x,y,image,true,true,7);
+						
+						break;
+			 case'U':
+					
+				 try{
+					 	image = ImageIO.read(new File("sprite/crystal_ball.png"));					
+						} catch (IOException e) {e.printStackTrace();}				
+						elementfixe[x][y] = new ElementFixe(x,y,image,true,true,6);
+						
+						break;
 			 case'B':
 					
 				 try{
 					 
 					 	image = ImageIO.read(new File("AIE1.PNG"));					
-					 	 System.out.println("bitebitebite");
 				 } catch (IOException e) {e.printStackTrace();}				
-						elementfixe[x][y] = new ElementFixe(x,y,image,false,false,7); 
+						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,8); 
 						break;
-//			 case'X': 
-//				 
-//				 boule.ResetX(x);
-//				 boule.ResetY(y);
+			 case'X': 
+			 
+				 boule.ResetX(x);
+				 boule.ResetY(y);
 			 default : 
 				 try{
-					 	image = ImageIO.read(new File("TERRE.png"));					
+					 	image = ImageIO.read(new File("TERRE.png"));
 						} catch (IOException e) {e.printStackTrace();}				
-						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,5);
-
-						System.out.println("rien");	 
+						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,9); 
 						
 					 break;		 
 			 		}cpt++;
