@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.Observable;
 import javax.imageio.ImageIO;
 import contract.IModel;
+import java.awt.Graphics;
 
 /**
  * The Class Model.
@@ -36,7 +37,7 @@ public class Model extends Observable implements IModel {
 		loadMessage(""+level);
 		initBoule();
 		System.out.println("Hero OK");
-		initElementFixe();
+		initElementFixe(null);
 	System.out.println("Elements fixes OK");
 	}
 
@@ -105,7 +106,7 @@ public class Model extends Observable implements IModel {
 		}	
 		boule = new Boule(1,1,image);		
 	}
-	public void initElementFixe()
+	public void initElementFixe(Graphics graphics)
 	{	
 		elementfixe = new ElementFixe[20][12];
 	System.out.println("element fixe reset");
@@ -199,7 +200,8 @@ public class Model extends Observable implements IModel {
 				 try{
 					 
 					 	image = ImageIO.read(new File("AIE1.PNG"));					
-				 } catch (IOException e) {e.printStackTrace();}				
+				 } catch (IOException e) {e.printStackTrace();}		
+				 		//g.drawImage(image);
 						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,8); 
 						break;
 			 case'X': 
@@ -209,7 +211,8 @@ public class Model extends Observable implements IModel {
 			 default : 
 				 try{
 					 	image = ImageIO.read(new File("TERRE.png"));
-						} catch (IOException e) {e.printStackTrace();}				
+						} catch (IOException e) {e.printStackTrace();}		
+				 		
 						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,9); 
 						
 					 break;		 
@@ -280,7 +283,7 @@ public class Model extends Observable implements IModel {
 		case 1:
 			level++;
 			loadMessage(""+level);
-			initElementFixe();
+			initElementFixe(null);
 		case 6:
 			for(y=0;y<=11;y++)
 			{
