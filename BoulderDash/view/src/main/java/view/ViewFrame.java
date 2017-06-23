@@ -17,13 +17,13 @@ public class ViewFrame extends JFrame {
 	    //Nous demandons maintenant à notre objet de se positionner au centre
 	    this.setLocationRelativeTo(null);
 	 
-	    /*
+	    
 	    //Instanciation d'un objet JPanel
 	    JPanel pan = new JPanel();
 	    //Définition de sa couleur de fond
-	    pan.setBackground(Color.ORANGE);        
+	    pan.setBackground(Color.BLUE);        
 	    //On prévient notre JFrame que notre JPanel sera son content pane
-	    this.setContentPane(pan); */              
+	    this.setContentPane(pan);               
 	    this.setVisible(true);
 	    
 	  } 

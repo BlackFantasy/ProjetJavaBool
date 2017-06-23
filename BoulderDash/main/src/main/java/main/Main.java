@@ -27,14 +27,14 @@ public abstract class Main {
     	ViewFrame windows = new ViewFrame();
     	ViewPanel img = new ViewPanel();
  
-        final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
+            final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
 
-        try {
-            controller.start();
-        } catch (final SQLException exception) {
-            exception.printStackTrace();
+            try {
+                controller.start();
+            } catch (final SQLException exception) {
+                exception.printStackTrace();
+            }
         }
-    }
     
     
 
