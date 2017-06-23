@@ -38,7 +38,7 @@ public interface IModel {//
 
 	int BoulegetX();
 	int BoulegetY();
-	//Image HerogetImage();
+	Image HerogetImage();
 	void BoulesetX(int x);
 	void BoulesetY(int y);
 	void BoulesetImage(Image img);
