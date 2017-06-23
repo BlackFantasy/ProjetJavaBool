@@ -1,78 +1,90 @@
 package controller;
 
-import java.sql.SQLException;
-import java.util.List;
+import contract.ControllerOrder;
+import contract.IController;
+import contract.IModel;
+import contract.IView;
 
-import model.Example;
-import model.IModel;
-import view.IView;
-
+// TODO: Auto-generated Javadoc
 /**
- * <h1>The Class ControllerFacade provides a facade of the Controller component.</h1>
- *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
- * @version 1.0
+ * The Class Controller.
  */
-public class ControllerFacade implements IController {
+public class Controller implements IController {
 
-    /** The view. */
-    private final IView  view;
+	/** The view. */
+	private IView		view;
 
-    /** The model. */
-    private final IModel model;
+	/** The model. */
+	private IModel	model;
 
-    /**
-     * Instantiates a new controller facade.
-     *
-     * @param view
-     *            the view
-     * @param model
-     *            the model
-     */
-    
+	/**
+	 * Instantiates a new controller.
+	 *
+	 * @param view
+	 *          the view
+	 * @param model
+	 *          the model
+	 */
+	public Controller(final IView view, final IModel model) {
+		this.setView(view);
+		this.setModel(model);
+	}
 
-    public ControllerFacade(final IView view, final IModel model) {
-        super();//bite
-        this.view = view;
-        this.model = model;
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see contract.IController#control()
+	 */
+	public void control() {
+		this.view.printMessage("Appuyez sur 1 2 3 4 ou 5 pour choisir le niveau");
+	}
 
-    /**
-     * Start.
-     *
-     * @throws SQLException
-     *             the SQL exception
-     */
-    public void start() throws SQLException {
-        this.getView().displayMessage(this.getModel().getExampleById(1).toString());
+	/**
+	 * Sets the view.
+	 *
+	 * @param view
+	 *          the new view
+	 */
+	private void setView(final IView view) {
+		this.view = view;
+	}
 
-        this.getView().displayMessage(this.getModel().getExampleByName("Example 2").toString());
+	/**
+	 * Sets the model.
+	 *
+	 * @param model
+	 *          the new model
+	 */
+	private void setModel(final IModel model) {
+		this.model = model;
+	}
 
-        final List<Example> examples = this.getModel().getAllExamples();
-        final StringBuilder message = new StringBuilder();
-        // a.append(" bar);
-        for (final Example example : examples) {
-            message.append(example);
-            message.append('\n');
-        }
-        this.getView().displayMessage(message.toString());
-    }
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see contract.IController#orderPerform(contract.ControllerOrder)
+	 */
+	public void orderPerform(final ControllerOrder controllerOrder) {
+		switch (controllerOrder) {
+			case English:
+				this.model.loadMessage("GB");
+				break;
+			case Francais:
+				this.model.loadMessage("FR");
+				break;
+			case Deutsch:
+				this.model.loadMessage("DE");
+				break;
+			case Indonesia:
+				this.model.loadMessage("ID");
+				break;
+			case cinque:
+				this.model.loadMessage("ci");
+				break;
 
-    /**
-     * Gets the view.
-     *
-     * @return the view
-     */
-    public IView getView() {
-        return this.view;
-    }
+			default:
+				break;
+		}
+	}
 
-    /**
-     * Gets the model.
-     *
-     * @return the model
-     */
-    public IModel getModel() {
-        return this.model;
-    }
 }
