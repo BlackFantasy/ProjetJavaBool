@@ -99,7 +99,7 @@ public class Model extends Observable implements IModel {
 	public void initBoule()
 	{
 		try {
-			  image = ImageIO.read(new File("ASPICOT.png"));
+			  image = ImageIO.read(new File("AIE1.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -155,7 +155,7 @@ public class Model extends Observable implements IModel {
 				
 				 try{
 				 	image = ImageIO.read(new File("sprite/horizontal_bone.png"));					
-					} catch (IOException e) {e.printStackTrace();}				
+					} catch (IOException e) {e.printStackTrace();}	
 					elementfixe[x][y] = new ElementFixe(x,y,image, false,false, 3);		
 					
 				 break;
@@ -199,10 +199,16 @@ public class Model extends Observable implements IModel {
 					
 				 try{
 					 
-					 	image = ImageIO.read(new File("AIE1.PNG"));					
-				 } catch (IOException e) {e.printStackTrace();}		
+
+					 image =ImageIO.read(new File("Backgroud.png"));
+				 } catch (IOException e) {e.printStackTrace();}
+				 
 				 		//g.drawImage(image);
 						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,8); 
+						 if(image != null)
+					        {
+					            System.out.println(""+image);   
+					        }
 						break;
 			 case'X': 
 			 
@@ -210,13 +216,15 @@ public class Model extends Observable implements IModel {
 				 boule.ResetY(y);
 			 default : 
 				 try{
-					 	image = ImageIO.read(new File("TERRE.png"));
+					 	image = ImageIO.read(new File("Backgroud.png"));
 						} catch (IOException e) {e.printStackTrace();}		
 				 		
 						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,9); 
 						
 					 break;		 
 			 		}cpt++;
+			 		
+			 		
 	 }
 	 }System.out.println("init fixe OKKKKKKKKKK");
 }
@@ -308,7 +316,7 @@ public class Model extends Observable implements IModel {
 		}
 		BoulesetY(-1);
 		
-		try { img =ImageIO.read(new File("sprite/lorann_u.png"));
+		try { img =ImageIO.read(new File("AIE1.png"));
 		} catch (IOException e) {e.printStackTrace();}
 		BoulesetImage(img);
 		}
@@ -323,7 +331,7 @@ public class Model extends Observable implements IModel {
 		}
 		BoulesetX(1);
 		
-		try { img =ImageIO.read(new File("sprite/lorann_r.png"));
+		try { img =ImageIO.read(new File("AIE1.png"));
 		} catch (IOException e) {e.printStackTrace();}
 		BoulesetImage(img);
 		}
@@ -338,7 +346,7 @@ public class Model extends Observable implements IModel {
 		}
 		BoulesetX(-1);
 		
-		try { img =ImageIO.read(new File("sprite/lorann_l.png"));
+		try { img =ImageIO.read(new File("AIE1.png"));
 		} catch (IOException e) {e.printStackTrace();}
 		BoulesetImage(img);
 		}
@@ -353,7 +361,7 @@ public class Model extends Observable implements IModel {
 		}
 		BoulesetY(1);
 		
-		try { img =ImageIO.read(new File("sprite/lorann_b.png"));
+		try { img =ImageIO.read(new File("AIE1.png"));
 		} catch (IOException e) {e.printStackTrace();}
 		BoulesetImage(img);
 		}
