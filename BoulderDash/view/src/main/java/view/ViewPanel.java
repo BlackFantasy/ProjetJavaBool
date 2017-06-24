@@ -82,63 +82,63 @@ class ViewPanel extends JPanel implements Observer {
 	}
 	graphics.drawImage(this.getViewFrame().getModel().BoulegetImage(), this.getViewFrame().getModel().BoulegetX()*64, this.getViewFrame().getModel().BoulegetY()*64, 64, 64, viewFrame);
 	}
-//	class animRock implements Runnable{
-//
-//		  public void run() {
-//		   int n=0;
-//		   Image img = null; 
-//		   while(true){
-//		    switch(n%1){
-//		    case 0:
-//		    	System.out.println("test 0");
-//		     try {
-//		      img = ImageIO.read(new File("TERRE.png"));
-//		     } catch (IOException e1) {e1.printStackTrace();}
-//		     getViewFrame().getModel().BoulesetImage(img);
-//		     break;
-//		    case 1:
-//		    	//System.out.println("test 1");
-//		     try {
-//		      img = ImageIO.read(new File("TERRE.png"));
-//		     } catch (IOException e1) {e1.printStackTrace();}
-//		     getViewFrame().getModel().BoulesetImage(img);
-//		     break;
-//		     
-//		    case 2 : 
-//		     try {
-//		      img = ImageIO.read(new File("sprite/lorann_br.png"));
-//		     } catch (IOException e1) {e1.printStackTrace();}
-//		     getViewFrame().getModel().BoulesetImage(img);
-//		     break;
-//		     
-//		    case 3 : 
-//		     try {
-//		      img = ImageIO.read(new File("sprite/lorann_r.png"));
-//		     } catch (IOException e1) {e1.printStackTrace();}
-//		     getViewFrame().getModel().BoulesetImage(img);
-//		     break;
-//		    
-//		    case 4 :
-//		     try {
-//		      img = ImageIO.read(new File("sprite/lorann_ur.png"));
-//		     } catch (IOException e1) {e1.printStackTrace();}
-//		     getViewFrame().getModel().BoulesetImage(img);
-//		     break;
-//		     
-//		    case 5 : 
-//		     try {
-//		      img = ImageIO.read(new File("sprite/lorann_u.png"));
-//		     } catch (IOException e1) {e1.printStackTrace();}
-//		     getViewFrame().getModel().BoulesetImage(img);
-//		     break;
-//		     
-//		    case 6:
-//		     try {
-//		      img = ImageIO.read(new File("sprite/lorann_ul.png"));
-//		     } catch (IOException e1) {e1.printStackTrace();}
-//		     getViewFrame().getModel().BoulesetImage(img);
-//		     break;
-//		     
+	class animDiam implements Runnable{
+
+		  public void run() {
+		   int n=0;
+		   Image img = null; 
+		   while(true){
+		    switch(n%7){
+		    case 0:
+		    	System.out.println("test 0");
+		     try {
+		      img = ImageIO.read(new File("DIAMANT1.png"));
+		     } catch (IOException e1) {e1.printStackTrace();}
+		     getViewFrame().getModel().BoulesetImage(img);
+		     break;
+		    case 1:
+		    	//System.out.println("test 1");
+		     try {
+		      img = ImageIO.read(new File("DIAMANT2.png"));
+		     } catch (IOException e1) {e1.printStackTrace();}
+		     getViewFrame().getModel().BoulesetImage(img);
+		     break;
+		     
+		    case 2 : 
+		     try {
+		      img = ImageIO.read(new File("DIAMANT3.png"));
+		     } catch (IOException e1) {e1.printStackTrace();}
+		     getViewFrame().getModel().BoulesetImage(img);
+		     break;
+		     
+		    case 3 : 
+		     try {
+		      img = ImageIO.read(new File("DIAMANT4.png"));
+		     } catch (IOException e1) {e1.printStackTrace();}
+		     getViewFrame().getModel().BoulesetImage(img);
+		     break;
+		    
+		    case 4 :
+		     try {
+		      img = ImageIO.read(new File("DIAMANT5.png"));
+		     } catch (IOException e1) {e1.printStackTrace();}
+		     getViewFrame().getModel().BoulesetImage(img);
+		     break;
+		     
+		    case 5 : 
+		     try {
+		      img = ImageIO.read(new File("DIAMANT6.png"));
+		     } catch (IOException e1) {e1.printStackTrace();}
+		     getViewFrame().getModel().BoulesetImage(img);
+		     break;
+		     
+		    case 6:
+		     try {
+		      img = ImageIO.read(new File("DIAMANT7.png"));
+		     } catch (IOException e1) {e1.printStackTrace();}
+		     getViewFrame().getModel().BoulesetImage(img);
+		     break;
+		     
 //		    case 7 :
 //		     try {
 //		      img = ImageIO.read(new File("sprite/lorann_l.png"));
@@ -146,18 +146,18 @@ class ViewPanel extends JPanel implements Observer {
 //		     getViewFrame().getModel().BoulesetImage(img);
 //		     break;
 //		    
-//		    }
-//		    n++;
-//		  //  System.out.println("test 2");
-//		    try {
-//		     Thread.sleep(100);
-//		    } catch (InterruptedException e) {
-//		     e.printStackTrace();
-//		    }
-//		  //  System.out.println("test 3");
-//		    repaint(0,0,getWidth(),getHeight());
-//		   }
-//	  }
+		    }
+		    n++;
+		  //  System.out.println("test 2");
+		    try {
+		     Thread.sleep(100);
+		    } catch (InterruptedException e) {
+		     e.printStackTrace();
+		    }
+		  //  System.out.println("test 3");
+		    repaint(0,0,getWidth(),getHeight());
+		   }
+	  }
 		  
-		// }
+		 }
 }

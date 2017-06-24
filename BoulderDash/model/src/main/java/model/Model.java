@@ -187,12 +187,12 @@ public class Model extends Observable implements IModel {
 						elementfixe[x][y] = new ElementFixe(x,y,image,true,true,7);
 						
 						break;
-			 case'P':
+			 case'D':
 					
 				 try{
-					 	image = ImageIO.read(new File("Dirt.png"));					
+					 	image = ImageIO.read(new File("DIAMANT.png"));					
 						} catch (IOException e) {e.printStackTrace();}				
-						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,1);
+						elementfixe[x][y] = new ElementFixe(x,y,image,true,true,7);
 						
 						break;
 			 case'B':
