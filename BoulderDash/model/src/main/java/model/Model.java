@@ -23,7 +23,7 @@ public class Model extends Observable implements IModel {
 	private Boule boule;
 	private char[] ch =null;
 	private int cpt = 0;
-	private ElementFixe[][] elementfixe = new ElementFixe[34][20];
+	private ElementFixe[][] elementfixe = new ElementFixe[30][18];
 	private Image ima =null;
 	private int x;
 	private int y;
@@ -108,7 +108,7 @@ public class Model extends Observable implements IModel {
 	}
 	public void initElementFixe(Graphics graphics)
 	{	
-		elementfixe = new ElementFixe[34][20];
+		elementfixe = new ElementFixe[30][18];
 	System.out.println("element fixe reset");
 	 	ch =null;
 		System.out.println("objets fixes init");
@@ -119,9 +119,9 @@ public class Model extends Observable implements IModel {
 		 System.out.println("ch init");
 		 System.out.println(ch[0]);
 		
-	for(y=0 ; y <  19;y++)
+	for(y=0 ; y <  17;y++)
 	{//System.out.println("for y init");
-		 for(x=0 ; x < 33 ; x++)
+		 for(x=0 ; x < 30 ; x++)
 		 { 	//System.out.println("x");
 			 
 			 switch(ch[cpt])
@@ -144,7 +144,7 @@ public class Model extends Observable implements IModel {
 			 case '-' :
 				 
 				 try {
-					image = ImageIO.read(new File("sprite/vertical_bone.png"));						
+					image = ImageIO.read(new File("Wall.png"));						
 					} catch (IOException e) {e.printStackTrace();}
 				 	elementfixe[x][y] = new ElementFixe(x,y,image,false,false,2);
 				 	
@@ -174,25 +174,25 @@ public class Model extends Observable implements IModel {
 			 case '1' :
 				 System.out.println("test");
 				 try{
-				 	image = ImageIO.read(new File("sprite/NoSprite.png"));					
+				 	image = ImageIO.read(new File("Backgroud.png"));					
 					} catch (IOException e) {e.printStackTrace();}				
 					elementfixe[x][y] = new ElementFixe(x,y,image,true,false,5);
 					
 				 break;//
-			 case'P':
+			 case'U':
 				
 				 try{
-					 	image = ImageIO.read(new File("sprite/purse.png"));					
+					 	image = ImageIO.read(new File("Dirt.png"));					
 						} catch (IOException e) {e.printStackTrace();}				
 						elementfixe[x][y] = new ElementFixe(x,y,image,true,true,7);
 						
 						break;
-			 case'U':
+			 case'P':
 					
 				 try{
-					 	image = ImageIO.read(new File("sprite/crystal_ball.png"));					
+					 	image = ImageIO.read(new File("Dirt.png"));					
 						} catch (IOException e) {e.printStackTrace();}				
-						elementfixe[x][y] = new ElementFixe(x,y,image,true,true,6);
+						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,1);
 						
 						break;
 			 case'B':
@@ -293,9 +293,9 @@ public class Model extends Observable implements IModel {
 			loadMessage(""+level);
 			initElementFixe(null);
 		case 6:
-			for(y=0;y<=19;y++)
+			for(y=0;y<=17;y++)
 			{
-				for(x=0;x<=33;x++)
+				for(x=0;x<=30;x++)
 				{
 					if (elementfixe[x][y].getid() == 1)
 					{

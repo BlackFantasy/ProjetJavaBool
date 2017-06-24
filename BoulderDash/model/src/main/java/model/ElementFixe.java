@@ -79,7 +79,7 @@ public class ElementFixe {
 	public int disableSprite()
 	{
 		try {
-			img = ImageIO.read(new File("TERRE.png"));
+			img = ImageIO.read(new File("Backgroud.png"));
 		} catch (IOException e) {e.printStackTrace();}
 		return id;
 		
@@ -91,7 +91,7 @@ public class ElementFixe {
 		case 1 :
 			
 			try {
-				this.img = ImageIO.read(new File("TERRE.png"));
+				this.img = ImageIO.read(new File("Backgroud.png"));
 			} catch (IOException e) {e.printStackTrace();}
 			setPenetrableON();
 			setRecuperableON();
