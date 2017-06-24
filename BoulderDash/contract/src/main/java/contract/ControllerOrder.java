@@ -7,6 +7,7 @@ public enum ControllerOrder {
 		Down,
 		Left,
 		Right,
+		Nothing
 		//z,
 		//q,
 		//s,

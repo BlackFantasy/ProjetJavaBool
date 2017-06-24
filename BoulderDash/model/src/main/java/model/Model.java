@@ -23,7 +23,7 @@ public class Model extends Observable implements IModel {
 	private Boule boule;
 	private char[] ch =null;
 	private int cpt = 0;
-	private ElementFixe[][] elementfixe = new ElementFixe[20][12];
+	private ElementFixe[][] elementfixe = new ElementFixe[34][20];
 	private Image ima =null;
 	private int x;
 	private int y;
@@ -99,7 +99,7 @@ public class Model extends Observable implements IModel {
 	public void initBoule()
 	{
 		try {
-			  image = ImageIO.read(new File("AIE1.png"));
+			  image = ImageIO.read(new File("FRONT.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -108,7 +108,7 @@ public class Model extends Observable implements IModel {
 	}
 	public void initElementFixe(Graphics graphics)
 	{	
-		elementfixe = new ElementFixe[20][12];
+		elementfixe = new ElementFixe[34][20];
 	System.out.println("element fixe reset");
 	 	ch =null;
 		System.out.println("objets fixes init");
@@ -119,9 +119,9 @@ public class Model extends Observable implements IModel {
 		 System.out.println("ch init");
 		 System.out.println(ch[0]);
 		
-	for(y=0 ; y <  11;y++)
+	for(y=0 ; y <  19;y++)
 	{//System.out.println("for y init");
-		 for(x=0 ; x < 19 ; x++)
+		 for(x=0 ; x < 33 ; x++)
 		 { 	//System.out.println("x");
 			 
 			 switch(ch[cpt])
@@ -293,9 +293,9 @@ public class Model extends Observable implements IModel {
 			loadMessage(""+level);
 			initElementFixe(null);
 		case 6:
-			for(y=0;y<=11;y++)
+			for(y=0;y<=19;y++)
 			{
-				for(x=0;x<=19;x++)
+				for(x=0;x<=33;x++)
 				{
 					if (elementfixe[x][y].getid() == 1)
 					{
@@ -316,7 +316,7 @@ public class Model extends Observable implements IModel {
 		}
 		BoulesetY(-1);
 		
-		try { img =ImageIO.read(new File("AIE1.png"));
+		try { img =ImageIO.read(new File("BACK.png"));
 		} catch (IOException e) {e.printStackTrace();}
 		BoulesetImage(img);
 		}
@@ -331,7 +331,7 @@ public class Model extends Observable implements IModel {
 		}
 		BoulesetX(1);
 		
-		try { img =ImageIO.read(new File("AIE1.png"));
+		try { img =ImageIO.read(new File("RIGHT1.png"));
 		} catch (IOException e) {e.printStackTrace();}
 		BoulesetImage(img);
 		}
@@ -346,7 +346,18 @@ public class Model extends Observable implements IModel {
 		}
 		BoulesetX(-1);
 		
-		try { img =ImageIO.read(new File("AIE1.png"));
+		try { img =ImageIO.read(new File("LEFT9.png"));
+		} catch (IOException e) {e.printStackTrace();}
+		BoulesetImage(img);
+		}
+	}
+	public void Nothing()
+	{
+		Image img = null;
+		if(ElementFixegetPenetrable(BoulegetX()-1, BoulegetY()) ==false)
+		{if(ElementFixegetRecuperable(BoulegetX()-1, BoulegetY()) == false)
+
+		try { img =ImageIO.read(new File("FRONT.png"));
 		} catch (IOException e) {e.printStackTrace();}
 		BoulesetImage(img);
 		}
@@ -361,7 +372,7 @@ public class Model extends Observable implements IModel {
 		}
 		BoulesetY(1);
 		
-		try { img =ImageIO.read(new File("AIE1.png"));
+		try { img =ImageIO.read(new File("FRONT1.png"));
 		} catch (IOException e) {e.printStackTrace();}
 		BoulesetImage(img);
 		}

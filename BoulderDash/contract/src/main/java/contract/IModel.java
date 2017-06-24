@@ -50,6 +50,7 @@ public interface IModel {//
 	void MoveLeft();
 	void MoveUp();
 	void MoveDown();
+	void Nothing();
 
 	Image BoulegetImage();
 
