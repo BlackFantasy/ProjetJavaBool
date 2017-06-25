@@ -9,6 +9,9 @@ import javax.imageio.ImageIO;
 import contract.IModel;
 import java.awt.Graphics;
 
+import java.util.Random;
+import java.util.ArrayList;
+
 /**
  * The Class Model.
  *
@@ -17,6 +20,7 @@ import java.awt.Graphics;
 public class Model extends Observable implements IModel {
 
 	/** The message. */
+//	private ArrayList<Daemon> badList = new ArrayList<Daemon>();				//Array which contain all Daemon of the map
 	private String message;
 	private int compteur =0;
 	private Image image = null;
@@ -38,8 +42,10 @@ public class Model extends Observable implements IModel {
 		initBoule();
 		System.out.println("Hero OK");
 		initElementFixe(null);
-	System.out.println("Elements fixes OK");
+//		Thread mouvEnemy = new Thread(new MouvEnemy());							//New thread for the moves of the daemons
+//		mouvEnemy.start();			//Start of the moves
 	}
+
 
 	/*
 	 * (non-Javadoc)
@@ -378,6 +384,7 @@ public class Model extends Observable implements IModel {
 		return null;
 	}
 
+	
 
 	
 

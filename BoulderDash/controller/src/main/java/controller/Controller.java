@@ -72,37 +72,40 @@ public class Controller implements IController {
 	 */
 	public void orderPerform(final ControllerOrder controllerOrder) {
 		Image img = null;
+		/**
+		 * see ControllerOrder
+		 */
 		switch (controllerOrder) {
 		case Up:
-			this.model.MoveUp();//permet de bouger vers le haut
-			this.view.ReUpdate();//update sprite lorann
+			this.model.MoveUp();//UP
+			this.view.ReUpdate();
 			
-			break;//faire une pause en attendant l'instruction suivante
+			break;
 		
 		case Down:
 			
-			this.model.MoveDown();//permet de bouger vers le bas
-			this.view.ReUpdate();//update sprite lorann
+			this.model.MoveDown();//Down
+			this.view.ReUpdate();
 			
 			break;
 		
 		case Right:
-			this.model.MoveRight();//permet de bouger vers la droite
-			this.view.ReUpdate();//update sprite lorann
+			this.model.MoveRight();
+			this.view.ReUpdate();
 			break;
 		
 		case Left:
-			this.model.MoveLeft();//permet de bouger vers la gauche
-			this.view.ReUpdate();//update sprite lorann
+			this.model.MoveLeft();
+			this.view.ReUpdate();
 			
 			break;
 		
 
 		default:
-			try {img =ImageIO.read(new File("FRONT"));//lire le sprite de lorann
+			try {img =ImageIO.read(new File("FRONT.png"));//if no moves : first possition
 			} catch (IOException e) {e.printStackTrace();}
-				this.model.BoulesetImage(img);//initialise l'image de LORANN
-				this.view.ReUpdate();//update sprite lorann
+				this.model.BoulesetImage(img);
+				this.view.ReUpdate();
 			break;
 		}
 	}

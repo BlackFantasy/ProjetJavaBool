@@ -13,9 +13,9 @@ import javax.imageio.ImageIO;
  */
 
 public class Boule  {
-	private int x;//les positions
+	private int x;//positions of the hero on the grid
 	private int y;
-	private Image img; //variable pour l image de lorann
+	private Image img; //image for the hero
 	/**
 	 * 
 	 * @param x
@@ -34,7 +34,7 @@ public class Boule  {
 	
 	Boule()
 	{
-		System.out.println("La classe boule merde");
+		System.out.println("Error class BOULE");
 	}
 
 	public int getX() {//prend les positions
