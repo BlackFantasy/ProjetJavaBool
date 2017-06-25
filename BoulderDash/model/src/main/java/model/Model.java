@@ -136,7 +136,7 @@ public class Model extends Observable implements IModel {
 //				 
 			 case 'C' :
 				 try {
-					image = ImageIO.read(new File("sprite/gate_closed.png"));						
+					image = ImageIO.read(new File("Exit_close.png"));						
 					} catch (IOException e) {e.printStackTrace();}
 				 	elementfixe[x][y] = new ElementFixe(x,y,image, false, false, 1);
 				 	
@@ -192,7 +192,7 @@ public class Model extends Observable implements IModel {
 				 try{
 					 	image = ImageIO.read(new File("DIAMANT.png"));					
 						} catch (IOException e) {e.printStackTrace();}				
-						elementfixe[x][y] = new ElementFixe(x,y,image,true,true,7);
+						elementfixe[x][y] = new ElementFixe(x,y,image,true,true,6);
 						
 						break;
 			 case'B':
@@ -204,12 +204,7 @@ public class Model extends Observable implements IModel {
 				 } catch (IOException e) {e.printStackTrace();}
 				 
 				 		//g.drawImage(image);
-						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,8); 
-						 if(image != null)
-					        {
-					            System.out.println(""+image);   
-					        }
-						break;
+						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,5);
 			 case'X': 
 			 
 				 boule.ResetX(x);
@@ -219,7 +214,7 @@ public class Model extends Observable implements IModel {
 					 	image = ImageIO.read(new File("Backgroud.png"));
 						} catch (IOException e) {e.printStackTrace();}		
 				 		
-						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,9); 
+						elementfixe[x][y] = new ElementFixe(x,y,image,true,false,5); 
 						
 					 break;		 
 			 		}cpt++;
@@ -293,9 +288,9 @@ public class Model extends Observable implements IModel {
 			loadMessage(""+level);
 			initElementFixe(null);
 		case 6:
-			for(y=0;y<=17;y++)
+			for(y=0;y< 17;y++)
 			{
-				for(x=0;x<=30;x++)
+				for(x=0;x< 30;x++)
 				{
 					if (elementfixe[x][y].getid() == 1)
 					{

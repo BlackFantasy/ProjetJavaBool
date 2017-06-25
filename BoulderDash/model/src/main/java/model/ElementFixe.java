@@ -91,7 +91,7 @@ public class ElementFixe {
 		case 1 :
 			
 			try {
-				this.img = ImageIO.read(new File("Backgroud.png"));
+				this.img = ImageIO.read(new File("Exit_open.png"));
 			} catch (IOException e) {e.printStackTrace();}
 			setPenetrableON();
 			setRecuperableON();
