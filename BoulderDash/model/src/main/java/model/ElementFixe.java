@@ -13,7 +13,7 @@ public class ElementFixe {
 	private Image img; 
 	private boolean Penetrable = false;	
 	private boolean Recuperable = false;
-	ElementFixe(int x,int y,Image img, boolean Penetrable , boolean Recuperable, int id)
+	ElementFixe(int x,int y,Image img, boolean Penetrable , boolean Recuperable, int id)//boolean of penetrating and pickable
 	{	this.img = null;
 		this.id =id;
 		this.x = x;
@@ -24,6 +24,10 @@ public class ElementFixe {
 		//System.out.println(img);
 		
 	}
+	
+	/**
+	 * Placing the elemet on map
+	 */
 	
 	ElementFixe()
 	{
@@ -84,6 +88,9 @@ public class ElementFixe {
 		return id;
 		
 	}
+	/**
+	 * When the state of door change
+	 */
 	public void changeState()
 	{
 		switch(id)

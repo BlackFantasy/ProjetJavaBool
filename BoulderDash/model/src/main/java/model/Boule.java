@@ -32,12 +32,16 @@ public class Boule  {
 		
 	}
 	
+	/**
+	 * Initiate Boule
+	 */
+	
 	Boule()
 	{
 		System.out.println("Error class BOULE");
 	}
 
-	public int getX() {//prend les positions
+	public int getX() {//getter and setter
 		return x;
 	}
 	public void setX(int x) {
